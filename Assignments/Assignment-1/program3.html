@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Time</title>
+    <link rel="stylesheet" href="program3.css">
+</head>
+
+<body>
+
+    <h2>Current Date and Time</h2>
+
+    <p id="output"></p>
+
+    <script>
+        let now = new Date();
+
+        let days = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+        ];
+
+        let date = now.toLocaleDateString();
+        let time = now.toLocaleTimeString();
+        let day = days[now.getDay()];
+        let year = now.getFullYear();
+
+        document.getElementById("output").innerHTML =
+            "Date: " + date + "<br>" +
+            "Time: " + time + "<br>" +
+            "Day: " + day + "<br>" +
+            "Year: " + year;
+    </script>
+
+</body>
+</html>
